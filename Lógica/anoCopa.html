@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jogo de Adivinhação</title>
+    <title>Ano da Copa</title>
 
 </head>
     <body>
@@ -20,7 +20,17 @@
                 pulaLinha();
             }
 
-            
+            var anoCopa = 1930;
+
+            var limite = parseInt(prompt("Entre com a data limite"));
+
+            while(anoCopa <= limite) {
+
+                mostra("Teve copa em " + anoCopa);
+                anoCopa = anoCopa + 4;
+            }
+
+            mostra("Fim");
         </script>
     </body>
 </html>
