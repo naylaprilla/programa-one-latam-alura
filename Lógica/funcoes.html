@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções</title>
+</head>
+<body>
+    <h1>Exercícios de Funções em JavaScrip</h1>
+</body>
+</html>
+
+<script>
+    function pulaLinha() {
+
+        document.write("<br><br>")
+
+    }
+
+    var titulo = "Bem Vindo ao meu programa!";
+
+    document.write("<h1>" + titulo + "</h1>");
+
+    pulaLinha();
+
+    document.write("Vocês não sabem o que eu tive que aprender para fazer isso!");
+
+    pulaLinha();
+
+    document.write("Contudo, assistindo os vídeos e estudando ...");
+
+    pulaLinha();
+
+    document.write("Eu vou mais longe!");
+
+    pulaLinha();
+
+
+    function exibeAlerta(mensagem) {
+        alert("***" + mensagem + "***"); 
+
+    }
+    var idade1 = 10;
+    var idade2 = 20;
+    var idade3 = 30;
+    var totalIdades = idade1 + idade2 + idade3;
+    var mediaIdades = totalIdades/3;
+    alert("***Total de idades é " + totalIdades + "***");
+    alert("***A média das idades é " +  mediaIdades + "***");
+
+    pulaLinha();
+
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function exibeTitulo(titulo) {
+        document.write("<h1>" + titulo + "</h1>");
+        pulaLinha();
+    }
+
+    function exibeParagrafo(paragrafo) {
+        document.write("<p>" + paragrafo + "</p>");
+        pulaLinha();
+    }
+
+    // pede para alguém ler daqui em diante e veja se ele entende o que esta sendo feito
+    exibeTitulo("Bem-vindos");
+    exibeParagrafo("Este é um simples programa");
+
+    function pulaLinha() {
+        document.write("<br>");
+    }
+
+    function mostra(frase) {
+        document.write(frase);
+        pulaLinha();       
+    }
+    var idadeMediaQuandoTemFilhos = 28;
+    var anoAtual = 2022;
+    var quantidadeDeGerações = (anoAtual - 1500) / idadeMediaQuandoTemFilhos;
+    
+    mostra(quantidadeDeGerações);
+
+
+</script>
