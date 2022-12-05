@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text">
+    <button>Compare com o meu segredo</button>
+
+    <script>
+
+        var segredo = Math.round(Math.random() * 10); 
+
+        var input = document.querySelector("input");// Está linkando o input que está no html.
+        input.focus();
+
+        function verifica() { // O if precisa ficar dentro da função
+
+            if(input.value == segredo) {
+
+                alert("Você ACERTOU!");
+            } else {
+                alert("Você ERROU!");
+            }
+            input.value = "";// Serve para zerar a caixinha do input.
+            input.focus();// Serve para deixar preparado para digitar na caixa no input.
+        }
+
+        var button = document.querySelector("button");
+
+        button.onclick = verifica;//não pode conter os parenteses para não chamar a função, mas para imprimir o que está escrito na função.
+    </script>
+</body>
+</html>

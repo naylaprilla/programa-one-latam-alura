@@ -26,15 +26,21 @@
             }
         
             var numeroPensado = sorteia(10);
-            var chute = parseInt(prompt("Em que número você acha que eu pensei?"));
-            
-            if(chute == numeroPensado) {
-        
-                mostra("Que incrível! você acertou, eu pensei no " + numeroPensado + ".");
-            } else {
-                
-                mostra("Ah... Que pena! Não foi dessa vez! Eu tinha pensado no " + numeroPensado + ".");
+
+            var tentativas = 1;
+
+            while(tentativas <= 3) {
+                var chute = parseInt(prompt("Em que número você acha que eu pensei?"));
+                if(chute == numeroPensado) {        
+                    mostra("Que incrível! Você acertou, o número pensado era " + numeroPensado);
+                    break; // Quebra o loop da repetição. Também seria possível dar um novo valor para a variável para que ela termine o loop Ex.: tentativas = 4;
+                } else {                
+                    mostra("Ah... Que pena! Não foi dessa vez.");
+                }
+                tentativas++;                
             }
+
+            mostra("FIM");
         </script>
     </body>
 </html>

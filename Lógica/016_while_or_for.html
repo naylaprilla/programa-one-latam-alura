@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+        function pulaLinha() { 
+            document.write("<br>");
+        }
+
+        function mostra(frase) {
+            document.write(frase);
+            pulaLinha();
+        }
+
+        for(var multiplicador = 1; multiplicador <= 10; multiplicador++) {
+
+            mostra(7 * multiplicador);
+        }
+
+        var multiplicador = 1;
+
+        while(multiplicador <= 10) {
+
+            mostra(7* multiplicador);
+            multiplicador = multiplicador + 1;
+        }
+        
+        //Exemplo 2 de estruturas de repetição com for e while:
+        for( var i = 0; i < 10; i++ ) {
+             alert( "O resultado é " + (2 * i) );
+        }
+
+        var i = 0;
+        while( i < 10) {
+            alert ("O resultado é " + ( 2 * i));
+            i++;
+        }
+        mostra("FIM");
+    </script>
+</body>
+</html>

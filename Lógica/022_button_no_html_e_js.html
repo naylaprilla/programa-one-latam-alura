@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texto digitado com botão</title>
+</head>
+<body>
+
+    <input type="text"/>
+    <button>Exibir texto digitado</button>
+
+    <script>
+        var input = document.querySelector("input");
+
+        function exibeTexto() {
+
+            alert(input.value);
+        }
+
+        var button = document.querySelector("button");
+        button.onclick = exibeTexto;
+
+    </script>
+    
+</body>
+</html>
