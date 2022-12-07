@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exibir Nomes</title>
+</head>
+<body>
+
+    <script>
+        /*6 – Peça ao usuário para digitar vários nomes. Exiba na tela todos os nomes digitados,
+         porém de maneira invertida (do último para o primeiro).*/
+
+        
+        var nomes = [];
+        var count = 1;
+
+        
+        
+        while(nomes.length < 3) {
+            let nomeDigitado = window.prompt(`Digite o ${count}º nome`);
+            // nomeDigitado = nomes[count-1];
+            nomes.push(nomeDigitado);
+            count+=1;   
+
+        }
+        document.write([nomes]);
+        document.write("<br>");
+
+        //inversao
+        var troca = [];
+
+        for(var i = 0; i < nomes.length; i++) {
+                troca [i] = nomes[(nomes.length-1)-i] ;
+                // nomes[i]=nomes[4-i]; 4-i, que vale 4 na primeira passada do FOR,
+                //  lebrando que i =0 , sera o ultimo indice deste array de tamanho 5              
+                
+        }
+        document.write([troca]);
+        document.write("<br>");
+
+
+ 
+
+
+
+
+
+
+        
+    </script>
+    
+</body>
+</html>

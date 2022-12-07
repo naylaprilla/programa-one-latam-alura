@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formas Dentro da Função</title>
+</head>
+<body>
+
+    <canvas width="600" height="400"></canvas>
+
+    <script>
+    //Para inserir contorno nas formas use
+    //pincel.strokeStyle = 'green';
+    //pincel.strokeRect(0, 0, 50, 50)
+
+    function desenhaQuadradoVerde() {
+
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+
+        pincel.fillStyle = 'green';
+        pincel.fillRect(0, 0, 50, 50);
+        pincel.strokeStyle = 'red';
+        pincel.strokeRect(0, 0, 50, 50);
+
+    }
+
+    desenhaQuadradoVerde();
+    desenhaQuadradoVerde();
+    desenhaQuadradoVerde();
+
+
+
+    </script>
+    
+</body>
+</html>
