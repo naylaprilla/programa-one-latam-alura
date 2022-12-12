@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rostinho</title>
+</head>
+<body>
+
+    <canvas width="600" height="400"></canvas>
+
+    <script>
+    
+        var tela = document.querySelector('canvas');
+        var pincel = tela.getContext('2d');
+        pincel.fillStyle = '#B4D9F5';
+        pincel.fillRect(0, 0, 600, 400);
+    
+        function desenhaCirculo(x, y, raio, cor) {
+    
+            pincel.fillStyle = cor;
+            pincel.beginPath();
+            pincel.arc(x, y, raio, 0, 2*Math.PI);
+            pincel.fill();
+        }
+
+        function desenhaQuadrado(x, y, tamanho, cor) {
+            var tela = document.querySelector('canvas');
+            var pincel = tela.getContext('2d');
+
+
+            pincel.fillStyle = cor;
+            pincel.fillRect(x, y, tamanho, tamanho);
+
+        }
+
+        function fundocabelo(x, y) {
+            
+            desenhaCirculo(x, y-200, 160, '#F25278') 
+            desenhaQuadrado(x-150, y-200, 310, '#F25278');
+            desenhaQuadrado(x-140, y-180, 290, '#DE5285');
+
+        }
+        fundocabelo (300, 400)
+
+        function cabeca (x, y) {
+
+            desenhaCirculo(160, y+20, 50, '#FFD8F0')
+            desenhaCirculo(160, y+20, 35, '#FF80AF')
+            desenhaCirculo(440, y+20, 50, '#FFD8F0')
+            desenhaCirculo(440, y+20, 35, '#FF80AF')
+            desenhaQuadrado(270, 340, 60, '#FFD8F0')
+            desenhaCirculo(x, y, 155, '#FF80AF')
+            desenhaCirculo(x, y, 150, '#FFD8F0')
+            
+              
+        }
+
+        cabeca (300, 200);
+
+        function rosto(x,y) {
+
+            desenhaCirculo(220, y-20, 30, '#B25757')
+            desenhaCirculo(380, y-20, 30, '#B25757')
+            desenhaCirculo(370, y-30, 10, '#F1F3F3')
+            desenhaCirculo(210, y-30, 10, '#F1F3F3')
+            desenhaCirculo(300, y+30, 35, '#D83667')
+            desenhaQuadrado(260, y-40, 80, '#FFD8F0')
+            
+
+        }
+
+        rosto (300,200)
+
+        function franja(x, y) {
+
+            desenhaCirculo(x, y-100, 60, '#F25278')
+
+        
+
+        }
+        franja (300, 200)
+
+
+        /* Parabéns! Você desenhou a nossa flor! 
+        Perceba que o círculo vermelho é o centro da nossa 
+        flor e ele está posicionado em 300 (x), 200 (y). 
+        Veja que os demais círculos se posicionam 20 pixels do círculo vermelho, 
+        tanto acima/abaixo ou direita/esquerda, a distância é sempre a mesma. 
+        Sendo assim, podemos indicar a posição x e y de onde o centro da flor 
+        será plotado/desenhado e dentro da função ajustar esse valor 
+        somando/subtraindo 20 pixels.
+        */
+    </script>
+</body>
+</html>
