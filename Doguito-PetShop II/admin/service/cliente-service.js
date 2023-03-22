@@ -1,21 +1,4 @@
-const criaNovaLinha = (nome, email) => {
-    const linhaNovoCliente = document.createElement('tr')
-    const conteudo =
-        `<td class="td" data-td>${nome}</td>
-            <td>${email}</td>
-                <td>
-            <ul class="tabela__botoes-controle">
-                <li><a href="../telas/edita_cliente.html" class="botao-simples botao-simples--editar">Editar</a></li>
-                <li><button class="botao-simples botao-simples--excluir" type="button">Excluir</button></li>
-            </ul>
-        </td>` 
-
-    linhaNovoCliente.innerHTML = conteudo
-    return linhaNovoCliente
-}
-
-const tabela = document.querySelector('[data-tabela]')
-
+// O fetch substitui ambos XMLHttpRequest + Promisse 
 const listaClientes = () => {
     return fetch(`http://localhost:3000/profile`)
     .then( resposta => {
@@ -23,20 +6,31 @@ const listaClientes = () => {
     })
 }
 
-listaClientes()
-.then(data => {
-    data.forEach(elemento => {
-        tabela.appendChild(criaNovaLinha(elemento.nome, elemento.email))
-    
-    })    
+const criaCliente = (nome, email) => {
+    return fetch(`http://localhost:3000/profile`, {
+        method: 'POST',
+        headers: {
+            'Content-Type' : 'application/json'
+        },
+        body: JSON.stringify({
+            nome: nome,
+            email: email
+        })
+        
+    })
+    .then( resposta => {
+        return resposta.body
+    })
+}
 
-})
+export const clienteService = {
+    listaClientes,
+    criaCliente
+}
 
 
 
-
-
-/* XMLHttpRequest + Promisse
+/* XMLHttpRequest + Promisse 
     const listaClientes = () => {
     const promise = new Promise((resolve, reject) => {
 
